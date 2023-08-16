@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+:root {
+  --background: #1e2124;
+  --foreground: #282b30;
+  --color: white;
+  --linkColor: #5865f2;
+  --linkColorHighlight: #eb459e ;
+  --visited: #fee75c;
+  --popColor: #57f287;
+  --backgroundImage: none;
+}
+
+h2{
+  color: var(--popColor) !important;
+}
+td.bgtaboff, td.bgtabon, img{
+  display: none;
+}
+
+div.pagebodydiv{
+  background-color: var(--foreground) !important;
+  padding: 0.5rem;
+}
+
+
+table[summary="This is main table for displaying Tab Items."]{
+  background-color: var(--foreground) !important;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+td.tabon > a, td.taboff > a{
+  padding: 1rem;
+  letter-spacing: 0.1rem;
+}
+
+body{
+  background-color: var(--background) !important;
+}
+
+* {
+  font-weight: normal !important;
+  font-family: 'Montserrat', sans-serif !important ;
+  color: var(--color) !important;
+  font-size: medium !important;
+  background-color: transparent !important;
+}
+
+div.banner_copyright > h5{
+  font-size: x-small !important;
+}
+
+td.pldefault > h2{
+  font-size: x-large !important;
+}
+
+body, td.tabon, td.taboff{
+  background-image: none !important;
+}
+
+div.pageheaderdiv1, div.infotextdiv, span.releasetext{
+  display: none !important;
+}
+
+td.bg3{
+  border: none !important;
+  padding: 0.5rem;
+  background-color: var(--linkColor) !important;
+}
+
+a.submenulinktext2, h2{
+  font-size: large !important;
+}
+
+img{
+  display: none !important;
+}
+
+a{
+  color: var(--linkColor) !important;
+}
+
+a:visited{
+  color: var(--visited) !important;
+}
+
+a:hover{
+  text-decoration: none !important;
+  color: var(--linkColorHighlight) !important;
+}
+
+td {
+
+  padding: 8px;
+  text-align: left;
+  background-image: none;
+  
+}
+
+input[type=text],select,input[type=password] {
+  flex: 1;
+  border: none;
+  padding: 8px;
+  margin-left: 0.5em;
+  background-color: #e4e5e1 !important;
+  outline: none;
+  color: black !important;
+}
+
+input[type=submit],input[type=reset] {
+  background-color: var(--linkColor) !important;
+  border: none;
+  margin-left: 0.5em;
+  color: white !important;
+  padding: 8px 15px;
+  cursor: pointer;
+  outline: none;
+}
