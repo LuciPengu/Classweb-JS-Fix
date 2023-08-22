@@ -86,7 +86,6 @@ a:visited{
 }
 
 a:hover{
-  text-decoration: none !important;
   color: var(--linkColorHighlight) !important;
 }
 
@@ -98,17 +97,23 @@ td {
   
 }
 
+
 input[type=text],select,input[type=password] {
   flex: 1;
   border: none;
   padding: 8px;
   margin-left: 0.5em;
-  background-color: #e4e5e1 !important;
+  background-color: var(--background) !important;
   outline: none;
-  color: black !important;
+  color: var(--color) !important;
+border: 1px solid var(--color);
+border-radius: 4px;
 }
 
+
 input[type=submit],input[type=reset] {
+  	border-radius: 4px;
+
   background-color: var(--linkColor) !important;
   border: none;
   margin-left: 0.5em;
