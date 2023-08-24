@@ -4,18 +4,44 @@ const link = document.createElement("link");
 link.rel = "stylesheet";
 link.href = browser.extension.getURL("styles.css");
 
+const footer = document.getElementsByClassName("banner_copyright")[0];
+
 const navbar = document.querySelectorAll('.taboff > a, .tabon > a');
 const newNavLinks = ["bwskflib.P_SelDefTerm","bwskfshd.P_CrseSchd","bwskotrn.P_ViewTermTran","bzskvate.P_VateaOccsGoal"];
-const newNavNames = ["Add Classes", "My Schedule", "My Grades", "Pay Fees"];
-console.log(navbar);
-let i = 0
-navbar.forEach((anchor) => {
-	console.log(anchor.href);
-  // Modify the href attribute
-  anchor.href = newNavLinks[i];
-	anchor.innerHTML = newNavNames[i];
-	i ++;
-});
+const newNavNames = ["My Classes", "My Schedule", "My Grades", "Pay Fees"];
+
+for (let i = 0; i < navbar.length; i++) {
+  navbar[i].href = newNavLinks[i];
+	navbar[i].innerHTML = newNavNames[i];
+}
+
+
+if (window.location.pathname == "/pls/OWA_PROD/twbkwbis.p_idm_logout"){
+  window.location.href = "/pls/OWA_PROD/twbkwbis.P_WWWLogin";
+}
+
+function downloadPageContent() {
+
+  const pageContent = document.documentElement.outerHTML;
+  
+  const blob = new Blob([pageContent], { type: 'text/html' });
+
+  const url = URL.createObjectURL(blob);
+
+  const downloadLink = document.createElement('a');
+  downloadLink.href = url;
+  downloadLink.download = 'current-page.html';
+  downloadLink.textContent = 'Download Page';
+
+  
+  downloadLink.click();
+}
+
+const downloadButton = document.createElement('button');
+downloadButton.textContent = '↓';
+downloadButton.addEventListener('click', downloadPageContent);
+
+document.body.appendChild(downloadButton);
 
 
 
@@ -39,5 +65,7 @@ browser.runtime.onMessage.addListener(function (message) {
     `--${variableName}`,
     variableValue
   );
+  
 });
+
 

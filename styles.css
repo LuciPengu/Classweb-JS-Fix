@@ -1,27 +1,30 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 :root {
-  --background: #1e2124;
-  --foreground: #282b30;
-  --color: white;
-  --linkColor: #5865f2;
-  --linkColorHighlight: #eb459e ;
-  --visited: #fee75c;
-  --popColor: #57f287;
-  --backgroundImage: none;
+    
+    --background: #fafafa;
+    --foreground": "#e4e5e1";
+    --color: "#552222";
+    --linkColorHighlight: "#7B1818";
+    --visited: #D2042D";
+    --popColor: #7B1818";
+    --linkColor: #D2042D";
+    
 }
 
 h2{
   color: var(--popColor) !important;
 }
-td.bgtaboff, td.bgtabon, img{
-  display: none;
+td.bgtaboff, td.bgtabon, img:not(.visible){
+  display: none !important;
 }
 
 div.pagebodydiv{
   background-color: var(--foreground) !important;
   padding: 0.5rem;
 }
+
+
 
 
 table[summary="This is main table for displaying Tab Items."]{
@@ -73,10 +76,6 @@ a.submenulinktext2, h2{
   font-size: large !important;
 }
 
-img{
-  display: none !important;
-}
-
 a{
   color: var(--linkColor) !important;
 }
@@ -90,13 +89,10 @@ a:hover{
 }
 
 td {
-
-  padding: 8px;
+  padding: 0.4rem;
   text-align: left;
   background-image: none;
-  
 }
-
 
 input[type=text],select,input[type=password] {
   flex: 1;
@@ -111,7 +107,7 @@ border-radius: 4px;
 }
 
 
-input[type=submit],input[type=reset] {
+input[type=submit],input[type=reset] , button{
   	border-radius: 4px;
 
   background-color: var(--linkColor) !important;

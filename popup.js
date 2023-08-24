@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const variableNameInput = document.getElementById("variable-name");
   const variableValueInput = document.getElementById("variable-value");
   const preloadButtons = document.querySelectorAll(".preload-button");
+  const saveButton = document.getElementById("save-button");
 
   applyButton.addEventListener("click", function() {
     const variableName = variableNameInput.value;
